@@ -219,13 +219,23 @@
               
               <form action="https://www.eco-cartouches71.fr/contactM.php" method="POST" onsubmit="myFunction()">
        		<script>
-		       function window.onload = myFunction() {
-                                        swal({
-                                        title: 'Message envoyé !',
-                                        text: 'Nous vous répondrons au plus vite !',
-                                        icon: 'success',
-                                        });
-              }
+			window.onload = function() {
+    var reloading = sessionStorage.getItem("reloading");
+    if (reloading) {
+        sessionStorage.removeItem("reloading");
+        myFunction();
+    }
+}
+
+function myFunction() {
+    sessionStorage.setItem("reloading", "true");
+    document.location.reload();
+    swal({
+            title: 'Message envoyé !',
+            text: 'Nous vous répondrons au plus vite !',
+            icon: 'success',
+            });
+}
               </script>
                 <div class="row">
                   <div class="col-lg-6 col-12">
