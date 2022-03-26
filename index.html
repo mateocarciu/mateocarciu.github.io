@@ -219,15 +219,15 @@
               
               <form action="https://www.eco-cartouches71.fr/contactM.php" method="POST" onsubmit="myFunction()">
        		<script>
-window.onload = myFunction;
+			onbeforeunload = myFunction;
 
-function myFunction() {
-    swal({
-            title: 'Message envoyé !',
-            text: 'Nous vous répondrons au plus vite !',
-            icon: 'success',
-            });
-}
+			function myFunction() {
+			    swal({
+				    title: 'Message envoyé !',
+				    text: 'Nous vous répondrons au plus vite !',
+				    icon: 'success',
+				    });
+			}
               </script>
                 <div class="row">
                   <div class="col-lg-6 col-12">
