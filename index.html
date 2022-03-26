@@ -217,8 +217,16 @@
           <div class="col-lg-6 col-12">
             <div class="contact-form">
               
-              <form action="https://www.eco-cartouches71.fr/contactM.php" method="POST" onsubmit="return checkform(this)">
-
+              <form action="https://www.eco-cartouches71.fr/contactM.php" method="POST" onsubmit="myFunction()">
+       		<script>
+		      function myFunction() {
+						swal({
+						title: 'Message envoyé !',
+						text: 'Nous vous répondrons au plus vite !',
+						icon: 'success',
+						});
+		      }
+              </script>
                 <div class="row">
                   <div class="col-lg-6 col-12">
                     <input type="text" class="form-control" name="name" placeholder="Nom Prénom" id="name" required 
