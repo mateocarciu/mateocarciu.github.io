@@ -217,16 +217,17 @@
           <div class="col-lg-6 col-12">
             <div class="contact-form">
               
-              <form action="https://www.eco-cartouches71.fr/contactM.php" method="POST" onbeforeunload="myFunction()">
+              <form action="https://www.eco-cartouches71.fr/contactM.php" method="POST">
        		<script>
-			
-
-			function myFunction() {
-			    swal({
+			var submitFormOkay = false;
+			window.onbeforeunload = function () {
+			    if (!submitFormOkay) {
+				 swal({
 				    title: 'Message envoyé !',
 				    text: 'Nous vous répondrons au plus vite !',
 				    icon: 'success',
 				    });
+			    }
 			}
               </script>
                 <div class="row">
@@ -251,7 +252,7 @@
 						        oninput="this.setCustomValidity('')"></textarea>
                   </div>
                   <div class="ml-lg-auto col-lg-5 col-12">
-                    <input type="submit" name="submit" class="form-control submit-btn" value="Envoyer">
+                    <input type="submit" onclick="submitFormOkay = true;" name="submit" class="form-control submit-btn" value="Envoyer">
                   </div>
                 </div>
               </form>
