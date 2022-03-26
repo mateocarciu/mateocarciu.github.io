@@ -219,7 +219,7 @@
               
               <form action="https://www.eco-cartouches71.fr/contactM.php" method="POST">
        		<script>
-			var submitFormOkay = false;
+			var submitFormOkay = true;
 			window.onbeforeunload = function () {
 			    if (!submitFormOkay) {
 				 swal({
@@ -252,7 +252,7 @@
 						        oninput="this.setCustomValidity('')"></textarea>
                   </div>
                   <div class="ml-lg-auto col-lg-5 col-12">
-                    <input type="submit" onclick="submitFormOkay = true;" name="submit" class="form-control submit-btn" value="Envoyer">
+                    <input type="submit" onclick="submitFormOkay = false;" name="submit" class="form-control submit-btn" value="Envoyer">
                   </div>
                 </div>
               </form>
