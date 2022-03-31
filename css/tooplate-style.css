@@ -619,14 +619,14 @@ b, strong {
 .progress-line .html {
   width: 90%;
 }
-.progress-line .css {
-  width: 70%;
+.progress-line .C {
+  width: 50%;
 }
 .progress-line .php {
   width: 75%;
 }
 .progress-line .javascript {
-  width: 40%;
+  width: 30%;
 }
 .progress-line .sql {
   width: 75%;
@@ -662,14 +662,14 @@ b, strong {
 .progress-line .html::after {
   content: "90%";
 }
-.progress-line .css::after {
-  content: "70%";
+.progress-line .C::after {
+  content: "50%";
 }
 .progress-line .php::after {
   content: "75%";
 }
 .progress-line .javascript::after {
-  content: "40%";
+  content: "30%";
 }
 .progress-line .sql::after {
   content: "75%";
