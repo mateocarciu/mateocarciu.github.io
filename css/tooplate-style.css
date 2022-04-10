@@ -292,7 +292,7 @@ b, strong {
 .dark-mode .navbar-light .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.8);
 }
-.dark-mode .navbar-light .navbar-nav .nav-link:hover {
+.dark-mode .navbar-light .navbar-nav .nav-link:hover  {
   color: #ffc200;
 }
 .dark-mode .navbar[class*="headroom--not-top"] {
@@ -602,7 +602,7 @@ b, strong {
   background: #f0f0f0;
   border-radius: 10px;
   transform: scaleX(0);
-  transform-origin: left;
+  /* transform-origin: left; */
   animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
@@ -612,7 +612,7 @@ b, strong {
   height: 100%;
   border-radius: 10px;
   transform: scaleX(0);
-  transform-origin: left;
+  /* transform-origin: left; */
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
@@ -623,22 +623,22 @@ b, strong {
 }
 
 .progress-line .html {
-  width: 90%;
+  width: 100%;
 }
 .progress-line .C {
-  width: 50%;
+  width: 100%;
 }
 .progress-line .php {
-  width: 75%;
+  width: 100%;
 }
 .progress-line .javascript {
-  width: 30%;
+  width: 100%;
 }
 .progress-line .sql {
-  width: 75%;
+  width: 100%;
 }
 
-.bar .progress-line span::before {
+/* .bar .progress-line span::before {
   position: absolute;
   content: "";
   height: 0;
@@ -650,7 +650,7 @@ b, strong {
   border-right-width: 0px;
   border-top-style: #f0f0f0;
   border-top-color: #07374a;
-}
+} */
 
 .bar .progress-line span::after {
   position: absolute;
@@ -665,7 +665,7 @@ b, strong {
 }
 
 
-.progress-line .html::after {
+/* .progress-line .html::after {
   content: "90%";
 }
 .progress-line .C::after {
@@ -679,7 +679,7 @@ b, strong {
 }
 .progress-line .sql::after {
   content: "75%";
-}
+} */
 
 /* ////........Media Query........//// */
 
@@ -692,3 +692,4 @@ b, strong {
         width: 100%;
     }
 }      
+
