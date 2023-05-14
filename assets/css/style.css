@@ -291,7 +291,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 text-align: center;
-z-index: 2;
+/* z-index: 2; */
 }
 #hero h1 {
 margin: 0 0 10px 0;
@@ -344,7 +344,7 @@ background: rgba(255, 255, 255, 0.15);
 }
 }
 
-.circles{
+/* .circles{
   position: absolute;
   top: 0;
   left: 0;
@@ -456,7 +456,7 @@ background: rgba(255, 255, 255, 0.15);
       border-radius: 50%;
   }
 
-}
+} */
 
 
 /*===========================
@@ -720,14 +720,14 @@ background: rgba(255, 255, 255, 0.15);
       .footer-content ul li {
         margin: 0 7px; } }
     .footer-content ul li a {
-      font-size: 30px;
-      width: 74px;
+      font-size: 21px;
+      /* width: 74px; */
       height: 70px;
-      line-height: 74px;
+      /* line-height: 74px;
       text-align: center;
-      border-radius: 50%;
+      border-radius: 50%; */
       color: #bebebe;
-      background-color: #1c2940;
+      /* background-color: #1c2940; */
       -webkit-transition: all 0.3s ease-out 0s;
       -moz-transition: all 0.3s ease-out 0s;
       -ms-transition: all 0.3s ease-out 0s;
@@ -735,9 +735,9 @@ background: rgba(255, 255, 255, 0.15);
       transition: all 0.3s ease-out 0s; }
       @media (max-width: 767px) {
         .footer-content ul li a {
-          width: 52px;
+          /* width: 52px; */
           height: 50px;
-          line-height: 50px;
+          /* line-height: 50px; */
           font-size: 20px; } }
       .footer-content ul li a:hover {
         background-color: #191919;
@@ -876,4 +876,35 @@ background: rgba(255, 255, 255, 0.15);
     height: 200px;
     
    /* Cette propriété permet de laisser une marge de 20 pixels à droite de l'image pour éviter qu'elle ne touche le contenu qui se trouve à droite */
+}
+#cookie-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px -1px 5px rgba(0,0,0,0.2);
+  z-index: 9999; /* Ajouter cette ligne pour définir le z-index */
+}
+
+.cookie-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.accept-button:hover {
+  background-color: #3e8e41;
+}
+
+.decline-button:hover {
+  background-color: #f44336;
 }
