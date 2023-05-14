@@ -1,4 +1,3 @@
-
 // Fonction pour créer un cookie
 function createCookie(name, value, days) {
     let expires;

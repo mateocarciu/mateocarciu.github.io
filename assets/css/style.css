@@ -14,7 +14,7 @@ body {
 
 #eco {
   height: auto;
-  width: 116px;
+  width: 107px;
 }
 
 a:focus,
@@ -239,7 +239,7 @@ p {
         -ms-transition: all 0.3s ease-out 0s;
         -o-transition: all 0.3s ease-out 0s;
         transition: all 0.3s ease-out 0s; }
-        .navigation .navbar .navbar-nav .nav-item a::before {
+        /* .navigation .navbar .navbar-nav .nav-item a::before {
           position: absolute;
           content: '';
           width: 3px;
@@ -256,7 +256,7 @@ p {
           -moz-transition: all 0.3s ease-out 0s;
           -ms-transition: all 0.3s ease-out 0s;
           -o-transition: all 0.3s ease-out 0s;
-          transition: all 0.3s ease-out 0s; }
+          transition: all 0.3s ease-out 0s; } */
           @media only screen and (min-width: 768px) and (max-width: 991px) {
             .navigation .navbar .navbar-nav .nav-item a::before {
               display: none; } }
@@ -872,8 +872,8 @@ background: rgba(255, 255, 255, 0.15);
   /* float: right; Cette propriété permet de faire flotter l'image à gauche */
     /* display: inline-block; */
    
-    width: 300px;
-    height: 200px;
+    width: 360px;
+    height: AUTO;
     
    /* Cette propriété permet de laisser une marge de 20 pixels à droite de l'image pour éviter qu'elle ne touche le contenu qui se trouve à droite */
 }
