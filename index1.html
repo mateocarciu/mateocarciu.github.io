@@ -343,10 +343,17 @@
         
         // Vérifie la préférence enregistrée
         function setInitialTheme() {
-            if (localStorage.theme === 'light' || (!('theme' in localStorage) && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.remove('dark');
+            // Si un thème est déjà enregistré dans le localStorage, on l'utilise
+            if ('theme' in localStorage) {
+                if (localStorage.theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
             } else {
-            document.documentElement.classList.add('dark');
+                // Si aucun thème n'est enregistré, on force le mode clair par défaut
+                localStorage.theme = 'light';
+                document.documentElement.classList.remove('dark');
             }
         }
 
