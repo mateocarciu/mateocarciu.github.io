@@ -493,132 +493,138 @@
             </div>
         </div>
     </section>
+</body>
+<footer class="bg-gray-100 dark:bg-purple-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="py-8 text-center text-gray-600 dark:text-gray-300">
+            <p class="text-sm">© 2025 - Mateo CARCIU</p>
+        </div>
+    </div>
+</footer>
+</html>
 
-    <style>
-        html {
-            scroll-behavior: smooth;
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .menu-transition {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+        #mainMenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: transparent;
+            padding: 1rem;
+            border-radius: 0 0 1rem 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
-        .menu-transition {
-            transition: transform 0.3s ease-in-out;
+        #mainMenu:not(.hidden) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
         }
+    }
+</style>
 
-        @media (max-width: 768px) {
-            #mainMenu {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: transparent;
-                padding: 1rem;
-                border-radius: 0 0 1rem 1rem;
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            }
+<script>
+    tailwind.config = {
+        darkMode: 'class'
+    }
+    // Gestion du thème
+    const themeToggle = document.getElementById('themeToggle');
 
-            #mainMenu:not(.hidden) {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-        }
-    </style>
-
-    <script>
-        tailwind.config = {
-            darkMode: 'class'
-        }
-        // Gestion du thème
-        const themeToggle = document.getElementById('themeToggle');
-
-        // Vérifie la préférence enregistrée
-        function setInitialTheme() {
-            // Si un thème est déjà enregistré dans le localStorage, on l'utilise
-            if ('theme' in localStorage) {
-                if (localStorage.theme === 'dark') {
-                    document.documentElement.classList.add('dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                }
+    // Vérifie la préférence enregistrée
+    function setInitialTheme() {
+        // Si un thème est déjà enregistré dans le localStorage, on l'utilise
+        if ('theme' in localStorage) {
+            if (localStorage.theme === 'dark') {
+                document.documentElement.classList.add('dark');
             } else {
-                // Si aucun thème n'est enregistré, on force le mode clair par défaut
-                localStorage.theme = 'light';
                 document.documentElement.classList.remove('dark');
             }
+        } else {
+            // Si aucun thème n'est enregistré, on force le mode clair par défaut
+            localStorage.theme = 'light';
+            document.documentElement.classList.remove('dark');
         }
+    }
 
-        // Exécute au chargement
-        setInitialTheme();
+    // Exécute au chargement
+    setInitialTheme();
 
-        // Gestion du clic sur le bouton de thème
-        themeToggle.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-            localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-        });
+    // Gestion du clic sur le bouton de thème
+    themeToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    });
 
-        // Défilement fluide pour les liens d'ancrage
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
+    // Défilement fluide pour les liens d'ancrage
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
 
-                if (targetId === '#') return; // Ignore les liens vides
+            if (targetId === '#') return; // Ignore les liens vides
 
-                const targetElement = document.querySelector(targetId);
+            const targetElement = document.querySelector(targetId);
 
-                if (targetElement) {
-                    const navHeight = document.querySelector('nav').offsetHeight;
-                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+            if (targetElement) {
+                const navHeight = document.querySelector('nav').offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
 
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Animation du burger menu
-        const menuToggle = document.getElementById('menuToggle');
-        const mainMenu = document.getElementById('mainMenu');
-
-        menuToggle.addEventListener('click', () => {
-            const spans = menuToggle.querySelectorAll('span');
-            mainMenu.classList.toggle('hidden');
-            menuToggle.classList.toggle('active');
-
-            if (menuToggle.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(-45deg)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(45deg)';
-            } else {
-                spans[0].style.transform = 'rotate(0)';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'rotate(0)';
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
+    });
 
-        // Animation au défilement améliorée
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
+    // Animation du burger menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mainMenu = document.getElementById('mainMenu');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                }
-            });
-        }, observerOptions);
+    menuToggle.addEventListener('click', () => {
+        const spans = menuToggle.querySelectorAll('span');
+        mainMenu.classList.toggle('hidden');
+        menuToggle.classList.toggle('active');
 
-        // Préparer les éléments pour l'animation
-        document.querySelectorAll('section > div, .group').forEach(element => {
-            element.classList.add('transform', 'transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-            observer.observe(element);
+        if (menuToggle.classList.contains('active')) {
+            spans[0].style.transform = 'rotate(-45deg)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'rotate(45deg)';
+        } else {
+            spans[0].style.transform = 'rotate(0)';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'rotate(0)';
+        }
+    });
+
+    // Animation au défilement améliorée
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+            }
         });
-    </script>
-</body>
+    }, observerOptions);
 
-</html>
+    // Préparer les éléments pour l'animation
+    document.querySelectorAll('section > div, .group').forEach(element => {
+        element.classList.add('transform', 'transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+        observer.observe(element);
+    });
+</script>
