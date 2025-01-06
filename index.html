@@ -1,352 +1,681 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <title>Mateo Carciu</title>
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/unicons.css">
-      <link rel="stylesheet" href="css/owl.carousel.min.css">
-      <link rel="stylesheet" href="css/owl.theme.default.min.css">
-      <!-- MAIN STYLE -->
-      <link rel="stylesheet" href="css/tooplate-style.css">
-      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-   </head>
-   <body>
-      <!-- MENU -->
-      <nav class="navbar navbar-expand-sm navbar-light">
-         <div class="container">
-            <a class="navbar-brand" href=""><i class='uil uil-user'></i> Mateo Carciu</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-               aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-               <ul class="navbar-nav mx-auto">
-                  <li class="nav-item">
-                     <a href="#about" class="nav-link"><span data-hover="A propos">A propos</span></a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#resume" class="nav-link"><span data-hover="Expérience/Formations">Expérience/Formations</span></a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#project" class="nav-link"><span data-hover="Projets">Projets</span></a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
-                  </li>
-               </ul>
-               <ul class="navbar-nav ml-lg-auto">
-                  <div class="ml-lg-4">
-                     <div class="color-mode d-lg-flex justify-content-center align-items-center">
-                        <i class="color-mode-icon"></i>
-                     </div>
-                  </div>
-               </ul>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mateo Carciu - Développeur Full Stack & Étudiant">
+    <meta name="author" content="Mateo Carciu">
+    <title>Mateo Carciu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="bg-white dark:bg-black theme-transition">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-transparent backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl sm:text-4xl font-bold text-black dark:text-white tracking-wider">MATEO CARCIU</h1>
+
+                <button id="menuToggle"
+                    class="md:hidden flex flex-col justify-between w-6 h-5 text-black dark:text-white">
+                    <span class="h-0.5 w-full bg-current origin-center transition-transform duration-300"></span>
+                    <span class="h-0.5 w-full bg-current origin-center transition-all duration-300"></span>
+                    <span class="h-0.5 w-full bg-current origin-center transition-transform duration-300"></span>
+                </button>
+
+                <div id="mainMenu"
+                    class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6 lg:space-x-12 fixed md:static top-16 left-0 right-0 z-50 shadow-lg md:shadow-none rounded-b-lg p-4 md:p-0 flex-col">
+                    <a href="#work"
+                        class="text-black dark:text-white dark:hover:text-pink-500 hover:text-pink-500 transition-colors duration-300">
+                        EXPÉRIENCES
+                    </a>
+                    <a href="#skills"
+                        class="text-black dark:text-white dark:hover:text-pink-500 hover:text-pink-500 transition-colors duration-300">
+                        COMPÉTENCES
+                    </a>
+                    <a href="#projects"
+                        class="text-black dark:text-white dark:hover:text-pink-500 hover:text-pink-500 transition-colors duration-300">
+                        PROJETS
+                    </a>
+                    <a href="#contact"
+                        class="text-black dark:text-white dark:hover:text-pink-500 hover:text-pink-500 transition-colors duration-300">
+                        CONTACT
+                    </a>
+
+                    <button id="themeToggle" class="p-2 rounded-full">
+                        <svg class="w-6 h-6 hidden dark:block text-yellow-500" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                        <svg class="w-6 h-6 block dark:hidden text-gray-800" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
             </div>
-         </div>
-      </nav>
-      <!-- Acc -->
-      <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
-                  <div class="about-text">
-                     <h1 class="animated animated-text">
-                        <span class="mr-2">Je suis </span>
-                        <div class="animated-info">
-                           <span class="animated-item">Etudiant</span>
-                           <span class="animated-item">Développeur</span> 
-                        </div>
-                     </h1>
-                     <p>Je suis Mateo Carciu, j'ai 22 ans et je suis actuellement étudiant à l'ESGI en 2ème année de Master Ingénierie du Web.
-                     </p>
-                     <p>Avant d'entrer dans ce programme de Master, j'ai obtenu un BTS SIO (Services Informatiques aux Organisations) avec une spécialisation en SLAM (Solutions Logicielles et Applications Métiers), suivi d'une Licence CPL (Commercialisation des produits en ligne).
-                     </p>
-                     <div class="custom-btn-group mt-4">
-                        <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Me contacter !</a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-5 col-md-12 col-12">
-                  <br><br>
-                  <div class="about-image svg">
-                     <img src="images/undraw/img.png" class="img-fluid" alt="svg image">
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- CV -->
-      <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-6 col-12">
-                  <h2 class="mb-4">Expérience professionnelle</h2>
-                  <div class="timeline">
-                     <div class="timeline-wrapper">
-                        <div class="timeline-yr">
-                           <span>2022</span>
-                        </div>
-                        <div class="timeline-info">
-                           <h3><span>10Torsions</span><br><small>Alternance (1an)</small></h3>
-                           <p>- Améliorations sur l’intranet (ajouts de
-                              fonctions PHP, création de statistiques).<br>
-                              - Mise au goût du jour de certains écrans.<br>
-                              - Séparation d’une table en plusieurs tables
-                              afin d’optimiser l’espace de la bdd.<br>
-                              - Importation de données de fichiers Excel
-                              dans la bdd grâce à des scripts Php.
-                              </p>
-                           <small>Langages utilisés : Php, Html, Css, Sql, JavaScript</small>
-                           <small>Logiciels utilisés : Visual Studio Code, Photoshop, InDesign</small>
-                        </div>
-                     </div>
-                     <div class="timeline-wrapper">
-                        <div class="timeline-yr">
-                           <span>2022</span>
-                        </div>
-                        <div class="timeline-info">
-                           <h3><span>Eco cartouches</span><br><small>Stage de 6 semaines (2022)</small></h3>
-                           <p>Développement d'un CRUD pour la gestion des salariés et des stagiaires.</p>
-                           <small>Langages utilisés : Php, Html, Css, Sql, JavaScript</small>
-                        </div>
-                     </div>
-                     <div class="timeline-wrapper">
-                        <div class="timeline-yr">
-                           <span>2021</span>
-                        </div>
-                        <div class="timeline-info">
-                           <h3><span>Eco cartouches</span><br><small>Stage de 6 semaines (2021)</small></h3>
-                           <p>Développement et restylisation d'un site internet.</p>
-                           <small>Langages utilisés : Php, Html, Css, JavaScript</small>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-6 col-12">
-                  <h2 class="mb-4 mobile-mt-2">Formations</h2>
-                  <div class="timeline">
-                     <div class="timeline-wrapper">
-                        <div class="timeline-yr">
-                           <span>2023</span>
-                        </div>
-                        <div class="timeline-info">
-                           <h3><span>MASTER</span><br><small>(2023-2025)</small></h3>
-                           <strong>ESGI - LYON</strong>
-                           <p>Ingénierie du Web</p>
-                        </div>
-                     </div>
-                     <div class="timeline-wrapper">
-                        <div class="timeline-yr">
-                           <span>2022</span>
-                        </div>
-                        <div class="timeline-info">
-                           <h3><span>LICENCE</span><br><small>LICENCE PRO (2022-2023)</small></h3>
-                           <strong>Iut de Dijon - Dijon </strong>
-                           <p>Commercialisation des produits en ligne </p>
-                        </div>
-                     </div>
-                     <div class="timeline-wrapper">
-                        <div class="timeline-yr">
-                           <span>2020</span>
-                        </div>
-                        <div class="timeline-info">
-                           <h3><span>BTS</span><br><small>BTS SIO (2020-2022)</small></h3>
-                           <strong>Lycée Mathias - Chalon-sur-Saône</strong>
-                           <p>BTS SIO spécialité SLAM (Solutions Logicielles et Applications Métiers).</p>
-                        </div>
-                     </div>
-                     <div class="timeline-wrapper">
-                        <div class="timeline-yr">
-                           <span>2017</span>
-                        </div>
-                        <div class="timeline-info">
-                           <h3><span>Bac</span><br><small>Bac pro Commerce (2017-2020)</small></h3>
-                           <strong>Lycée Emiland Gauthey - Chalon-sur-Saône</strong>
-                           <p>Bac obtenu avec la mention bien !</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <section class="project py-5" id="competences">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-11 mx-auto col-12">
-                  <div class="col-lg-8 text-center mx-auto">
-                     <h2>Compétences</h2>
-                     <br><br>
-                  </div>
-                  <center>
-                     <p>Toutes ces connaissances ont été acquises de différentes façons et s'approfondissent encore,
-                        elles ont été acquises durant mes études et ainsi que par ma propre volonté d'approffondir mes conaissances.
-                     </p>
-                     <br>
-                  </center>
-                  <div class="skills">
-                     <div class="skills-bar">
-                        <div class="bar">
-                           <div class="info">
-                              <center><span>HTML - CSS</span></center>
-                           </div>
-                           <div class="progress-line"><span class="html"></span></div>
-                           <div class="bar">
-                              <div class="info">
-                                 <center><span>JavaScript</span></center>
-                              </div>
-                              <div class="progress-line">
-                                 <span class="javascript"></span>
-                              </div>
-                              <div class="bar">
-                                 <div class="info">
-                                    <center><span>C# - Wpf - Xamarin</span></center>
-                                 </div>
-                                 <div class="progress-line"><span class="C"></span></div>
-                                 <div class="bar">
-                                    <div class="info">
-                                       <center><span>PHP - Lavarel - Symfony</span></center>
-                                    </div>
-                                    <div class="progress-line"><span class="php"></span></div>
-                                    <div class="bar">
-                                       <div class="info">
-                                          <center><span>SQL - Création de Bdd -  MCD et schéma relationnel</span></center>
-                                       </div>
-                                       <div class="progress-line"><span class="sql"></span></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- PROJETS -->
-      <section class="project py-5" id="project">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-11 text-center mx-auto col-12">
-                  <div class="col-lg-8 mx-auto">
-                     <h2>Projets réalisés</h2>
-                     <br><br>
-                  </div>
-                  <div class="owl-carousel owl-theme">
-                     <div class="item">
-                        <p>
-                        <h5>Développement d'une application de création et partage de recettes dans le but d'apprendre Symfony.</h5>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="min-h-screen relative overflow-hidden pt-20">
+        <div
+            class="absolute inset-0 bg-gradient-to-br from-blue-100 via-white to-white dark:from-purple-900 dark:via-black dark:to-black opacity-90 theme-transition">
+        </div>
+        <div class="absolute inset-0">
+            <div class="h-full w-full bg-[radial-gradient(circle_at_50%_50%,#ff2d55,transparent_50%)] opacity-20"></div>
+        </div>
+        <div class="relative h-full flex items-center py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
+                        <h2
+                            class="text-4xl sm:text-6xl lg:text-8xl font-bold text-gray-900 dark:text-white leading-none">
+                            DÉVELOPPEUR<br />& ÉTUDIANT</h2>
+                        <p
+                            class="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0">
+                            Je m'appelle Mateo Carciu et je suis actuellement étudiant à l'ESGI en 2ème année de Master
+                            Ingénierie du Web.
                         </p>
-                        <div class="project-info">
-                          <video width="100%" height="550" controls>
-                           <source src="images/project/votrerecette.mp4" type="video/mp4">
-                           </video>
+                        <div
+                            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center lg:justify-start">
+                            <a href="#contact" class="group relative px-8 py-4 bg-transparent overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                </div>
+                                <span class="relative text-gray-900 dark:text-white text-lg">CONTACTEZ-MOI</span>
+                            </a>
+                            <a href="#work"
+                                class="group relative px-8 py-4 bg-transparent overflow-hidden border border-gray-900 dark:border-white">
+                                <div
+                                    class="absolute inset-0 bg-gray-900 dark:bg-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                </div>
+                                <span
+                                    class="relative text-gray-900 dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors duration-300 text-lg">PORTFOLIO</span>
+                            </a>
                         </div>
-                     </div>
-                     <div class="item">
-                        <p>
-                        <h5>Création d'un site web pour l'entreprise Eco Cartouches 71</h5>
-                        </p>
-                        <div class="project-info">
-                           <iframe src="https://www.eco-cartouches71.fr/" width="100%" height="550" style="border-width: 0;" ></iframe>
-                        </div>
-                     </div>
-                     <div class="item">
-                        <p>
-                        <h5>Création d'un CRUD qui permet la gestion des employés au sein de l'entreprise Eco Cartouches</h5>
-                        </p>
-                        <div class="project-info">
-                           <img src="images/project/gif.gif" >
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
-      <!-- CONTACT -->
-      <section class="contact py-5" id="contact">
-         <div class="container">
-            <h2 class="mb-4">Me contacter !</h2>
-            <div class="row">
-               <div class="col-lg-5 mr-lg-5 col-12">
-                  <div class="google-map w-100">
-                     <iframe src="https://maps.google.com/maps?q=lyon&t=&z=13&ie=UTF8&iwloc=&output=embed" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-                  </div>
-                   <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
-                    <div class="contact-info-item">
-                        <p class="footer-text mb-0">📍 Lyon</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-6 col-12">
-                  <div class="contact-form">
-                     <form action="https://www.eco-cartouches71.fr/contactM.php" method="POST">
-                       <script>
-                           var submitFormOkay = true;
-                           window.onbeforeunload = function () {
-                               if (!submitFormOkay) {
-                             swal({
-                                 title: 'Message envoyé !',
-                                 icon: 'success',
-                                 });
-                               }
-                           }
-                                   </script> 
-                        <div class="row">
-                           <div class="col-lg-6 col-12">
-                              <input type="text" class="form-control" name="name" placeholder="Nom Prénom" id="name" required 
-                                 oninvalid="this.setCustomValidity('Veuillez entrer le nom et le prénom')"
-                                 oninput="this.setCustomValidity('')">
-                           </div>
-                           <div class="col-lg-6 col-12">
-                              <input type="email" class="form-control" name="email" placeholder="Email" id="email" required 
-                                 oninvalid="this.setCustomValidity('Veuillez entrer un email')"
-                                 oninput="this.setCustomValidity('')">
-                           </div>
-                           <div class="col-lg-6 col-12">
-                              <input type="text" class="form-control" name="sub" placeholder="Objet" id="sub" required 
-                                 oninvalid="this.setCustomValidity('Veuillez entrer un objet')"
-                                 oninput="this.setCustomValidity('')">
-                           </div>
-                           <div class="col-12">
-                              <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required 
-                                 oninvalid="this.setCustomValidity('Veuillez entrer un message')"
-                                 oninput="this.setCustomValidity('')"></textarea>
-                           </div>
-                           <div class="ml-lg-auto col-lg-5 col-12">
-                              <input type="submit" onclick="submitFormOkay = false;" name="submit" class="form-control submit-btn" value="Envoyer">
-                           </div>
+        </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="work" class="py-20 sm:py-32 bg-gray-50 dark:bg-black relative theme-transition">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <h3 class="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-12 sm:mb-20">EXPÉRIENCES</h3>
+            <div class="space-y-20 sm:space-y-32">
+
+                <div class="group relative">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-6 space-y-6 relative">
+                            <div
+                                class="absolute lg:-right-4 lg:top-0 lg:bottom-0 w-0.5 bg-pink-500 transform lg:block hidden">
+                            </div>
+                            <div class="text-pink-500 text-xl">2023 - 2025 (Alternance 2 ans)</div>
+                            <h4 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Développeur Full
+                                Stack - EDiCS</h4>
+                            <ul
+                                class="list-disc pl-6 text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed space-y-2">
+                                <li>Migration et développement d'une plateforme SaaS avec des technologies modernes :
+                                    Laravel pour le backend, Nuxt.js pour le frontend.</li>
+                                <li>Maintenance de la plateforme SaaS, incluant l'ajout de nouvelles fonctionnalités et
+                                    la résolution de bugs.</li>
+                                <li>Tests unitaires et revue de code pour garantir la qualité et la fiabilité des
+                                    livrables.</li>
+                                <li>Utilisation de Jira pour la gestion des tickets et de GitLab pour le versionnement
+                                    du code.</li>
+                                <li>Mise en œuvre de Tailwind CSS et TypeScript pour améliorer le style et la robustesse
+                                    des applications.</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-4">
+                                <span
+                                    class="px-6 py-2 bg-pink-500/20 text-pink-600 dark:text-pink-400 rounded-full">PHP</span>
+                                <span
+                                    class="px-6 py-2 bg-purple-500/20 text-purple-600 dark:text-purple-400 rounded-full">Laravel</span>
+                                <span
+                                    class="px-6 py-2 bg-green-500/20 text-green-600 dark:text-green-400 rounded-full">Vue.js</span>
+                                <span
+                                    class="px-6 py-2 bg-blue-500/20 text-blue-600 dark:text-blue-400 rounded-full">Nuxt.js</span>
+                                <span
+                                    class="px-6 py-2 bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 rounded-full">Tailwind
+                                    CSS</span>
+                                <span
+                                    class="px-6 py-2 bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 rounded-full">TypeScript</span>
+                            </div>
                         </div>
-                     </form>
-                  </div>
-               </div>
+                        <div
+                            class="lg:col-span-6 lg:p-6 space-y-4 relative mt-12 flex flex-col items-center lg:items-start">
+                            <div class="absolute lg:hidden -top-10 w-0.5 h-10 bg-pink-500 transform -translate-x-1/2">
+                            </div>
+                            <div class="flex items-center space-x-3 dark:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-10">
+                                    <path
+                                        d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
+                                    <path
+                                        d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" />
+                                    <path
+                                        d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
+                                </svg>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="text-pink-500">2023-2025</div>
+                                <div class="text-xl font-semibold text-gray-900 dark:text-white">Master Ingénierie du
+                                    Web</div>
+                                <div class="text-gray-600 dark:text-gray-300">ESGI - Lyon</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="group relative">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div
+                            class="lg:col-span-6 lg:p-6 space-y-4 relative mt-12 flex flex-col items-center lg:items-start order-2 lg:order-2">
+                            <div class="absolute lg:hidden -top-10 w-0.5 h-10 bg-pink-500 transform -translate-x-1/2">
+                            </div>
+                            <div class="flex items-center space-x-3 dark:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-10">
+                                    <path
+                                        d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
+                                    <path
+                                        d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" />
+                                    <path
+                                        d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
+                                </svg>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="text-pink-500">2022-2023</div>
+                                <div class="text-xl font-semibold text-gray-900 dark:text-white">Commercialisation des
+                                    produits en ligne</div>
+                                <div class="text-gray-600 dark:text-gray-300">Iut de Dijon - Dijon</div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-6 space-y-6 order-1 lg:order-2 relative lg:pl-6">
+                            <div
+                                class="absolute lg:-left-4 lg:top-0 lg:bottom-0 w-0.5 bg-pink-500 transform lg:block hidden">
+                            </div>
+
+                            <div class="text-pink-500 text-xl">2022 - 2023 (Alternance 1 an)</div>
+                            <h4 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Développeur full
+                                stack - 10Torsions</h4>
+                            <ul
+                                class="list-disc pl-6 text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed space-y-2">
+                                <li>Ajout de nouvelles fonctionnalités en PHP, notamment des outils de statistiques
+                                    personnalisées.</li>
+                                <li>Modernisation de l'interface pour une meilleure ergonomie et un design optimisé.
+                                </li>
+                                <li>Optimisation de la base de données via la restructuration de tables volumineuses.
+                                </li>
+                                <li>Automatisation de l'importation de fichiers Excel grâce à des scripts PHP.</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-4">
+                                <span
+                                    class="px-6 py-2 bg-pink-500/20 text-pink-600 dark:text-pink-400 rounded-full">PHP</span>
+                                <span
+                                    class="px-6 py-2 bg-purple-500/20 text-purple-600 dark:text-purple-400 rounded-full">SQL</span>
+                                <span
+                                    class="px-6 py-2 bg-blue-500/20 text-blue-600 dark:text-blue-400 rounded-full">Javascript</span>
+                                <span
+                                    class="px-6 py-2 bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 rounded-full">Excel</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="group relative">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-6 space-y-6 relative">
+                            <div
+                                class="absolute lg:-right-4 lg:top-0 lg:bottom-0 w-0.5 bg-pink-500 transform lg:block hidden">
+                            </div>
+                            <div class="text-pink-500 text-xl">2022 (Stage 1 mois)</div>
+                            <h4 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Développeur full
+                                stack - Eco Cartouches</h4>
+                            <ul
+                                class="list-disc pl-6 text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed space-y-2">
+                                <li>Développement d'un CRUD en PHP sans framework pour la gestion centralisée des
+                                    documents des salariés et stagiaires.</li>
+                                <li>Fonctionnalités principales : ajout, modification, suppression, visualisation, et
+                                    recherche de documents via une interface utilisateur.</li>
+                                <li>Objectif principal : virtualisation des documents pour remplacer les archives
+                                    physiques par une plateforme en ligne accessible.</li>
+                                <li>Hébergement complet : configuration du serveur, création de la base de données, et
+                                    déploiement du projet.</li>
+                                <li>Restylisation complète du site vitrine de l'entreprise, repensé et refait de A à Z.
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-4">
+                                <span
+                                    class="px-6 py-2 bg-pink-500/20 text-pink-600 dark:text-pink-400 rounded-full">PHP</span>
+                                <span
+                                    class="px-6 py-2 bg-blue-500/20 text-blue-600 dark:text-blue-400 rounded-full">HTML</span>
+                                <span
+                                    class="px-6 py-2 bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 rounded-full">CSS</span>
+                                <span
+                                    class="px-6 py-2 bg-purple-500/20 text-purple-600 dark:text-purple-400 rounded-full">AJAX</span>
+                                <span
+                                    class="px-6 py-2 bg-gray-500/20 text-gray-600 dark:text-gray-400 rounded-full">jQuery</span>
+                            </div>
+                        </div>
+                        <div
+                            class="lg:col-span-6 lg:p-6 space-y-4 relative mt-12 flex flex-col items-center lg:items-start">
+                            <div class="absolute lg:hidden -top-10 w-0.5 h-10 bg-pink-500 transform -translate-x-1/2">
+                            </div>
+                            <div class="flex items-center space-x-3 dark:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-10">
+                                    <path
+                                        d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
+                                    <path
+                                        d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" />
+                                    <path
+                                        d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
+                                </svg>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="text-pink-500">2020-2022</div>
+                                <div class="text-xl font-semibold text-gray-900 dark:text-white">BTS SIO spécialité SLAM
+                                    (Solutions Logicielles et Applications Métiers)</div>
+                                <div class="text-gray-600 dark:text-gray-300">Lycée Mathias - Chalon-sur-Saône</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-         </div>
-      </section>
-      <footer class="footer py-5">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-12 col-12">
-                  <p class="copyright-text text-center">Copyright &copy; 2024 Mateo CARCIU</p>
-               </div>
+        </div>
+    </section>
+
+    <!-- Skills section -->
+    <section id="skills" class="py-20 sm:py-32 relative bg-white dark:bg-black theme-transition">
+        <div
+            class="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-white dark:from-black dark:via-purple-900/20 dark:to-black theme-transition">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
+            <h3 class="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-12 sm:mb-20">COMPÉTENCES</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Back-end -->
+                <div class="group">
+                    <div
+                        class="relative p-6 sm:p-8 bg-gray-100/50 dark:bg-white/5 rounded-xl backdrop-blur-sm border border-gray-200 dark:border-white/10 hover:border-pink-500/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-500/20 opacity-0 
+                                    group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                        <div class="relative space-y-4">
+                            <div class="flex space-x-4 items-center">
+                                <div
+                                    class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-pink-500 to-purple-500 rounded-xl flex items-center justify-center">
+                                    <span class="text-2xl sm:text-3xl">⚙</span>
+                                </div>
+                                <h4 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Back-end</h4>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="text-gray-600 dark:text-gray-300">PHP, Laravel, Symfony, SQL, MongoDB, Node.js
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Front-end -->
+                <div class="group">
+                    <div class="relative p-6 sm:p-8 bg-gray-100/50 dark:bg-white/5 rounded-xl backdrop-blur-sm border border-gray-200 dark:border-white/10 
+                                hover:border-blue-500/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 opacity-0 
+                                    group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                        <div class="relative space-y-4">
+                            <div class="flex space-x-4 items-center">
+                                <div
+                                    class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center">
+                                    <span class="text-2xl sm:text-3xl">🎨</span>
+                                </div>
+                                <h4 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Front-end</h4>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="text-gray-600 dark:text-gray-300">Vue.js, Nuxt.js, JavaScript, Tailwind CSS,
+                                    HTML, CSS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other skills -->
+                <div class="group">
+                    <div class="relative p-6 sm:p-8 bg-gray-100/50 dark:bg-white/5 rounded-xl backdrop-blur-sm border border-gray-200 dark:border-white/10 
+                                hover:border-yellow-500/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-green-500/20 opacity-0 
+                                    group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                        <div class="relative space-y-4">
+                            <div class="flex space-x-4 items-center">
+                                <div
+                                    class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-yellow-500 to-green-500 rounded-xl flex items-center justify-center">
+                                    <span class="text-2xl sm:text-3xl">🛠️</span>
+                                </div>
+                                <h4 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Autres
+                                    compétences
+                                </h4>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="text-gray-600 dark:text-gray-300">Git, GitLab, Jira, Tests unitaires, Revue de
+                                    code</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </footer>
-      <script src="js/jquery-3.3.1.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/Headroom.js"></script>
-      <script src="js/jQuery.headroom.js"></script>
-      <script src="js/owl.carousel.min.js"></script>
-      <script src="js/smoothscroll.js"></script>
-      <script src="js/custom.js"></script>
-   </body>
+        </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects" class="py-20 sm:py-32 bg-gray-50 dark:bg-black theme-transition">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <h3 class="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-12 sm:mb-20">PROJETS</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16 lg:flex-row-reverse">
+                <div class="lg:col-span-6">
+                    <img src="images/taxi.png" alt="Image de du site vitrine du projet TAXIROOX71"
+                        class="w-full rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="lg:col-span-6 space-y-4 text-center lg:text-left">
+                    <h4 class="text-3xl font-bold text-gray-900 dark:text-white">Site vitrine de taxi</h4>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Création du site vitrine <a href="https://www.taxiroox71.fr/" target="_blank"
+                            class="text-gray-900 dark:text-white hover:text-pink-500 transition-colors duration-300">
+                            TAXIROOX71
+                        </a> lors du lancement de l'entreprise afin d'affirmer sa présence sur le web. Ce projet inclut
+                        la conception et le développement du site, ainsi que l'optimisation du référencement pour
+                        améliorer la visibilité de l'entreprise.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <span
+                            class="px-6 py-2 bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 rounded-full">HTML</span>
+                        <span
+                            class="px-6 py-2 bg-purple-500/20 text-purple-600 dark:text-purple-400 rounded-full">CSS</span>
+                        <span
+                            class="px-6 py-2 bg-teal-500/20 text-teal-600 dark:text-teal-400 rounded-full">JavaScript</span>
+                        <span
+                            class="px-6 py-2 bg-gray-500/20 text-gray-600 dark:text-gray-400 rounded-full">jQuery</span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
+                <div class="lg:col-span-6">
+                    <video
+                        class="w-full rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-700"
+                        controls>
+                        <source src="images/votrerecette.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="lg:col-span-6 space-y-4 text-center lg:text-left">
+                    <h4 class="text-3xl font-bold text-gray-900 dark:text-white">Application de partage de recettes</h4>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Développement d'une application de création et partage de recettes dans le but d'apprendre
+                        Symfony. Cette application permet aux utilisateurs de créer, partager et découvrir des recettes
+                        de cuisine. Les fonctionnalités incluent la gestion des utilisateurs, la création de recettes
+                        avec des images et des instructions détaillées, ainsi que la possibilité de commenter et
+                        d'évaluer les recettes des autres utilisateurs.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <span class="px-6 py-2 bg-pink-500/20 text-pink-600 dark:text-pink-400 rounded-full">PHP</span>
+                        <span
+                            class="px-6 py-2 bg-blue-500/20 text-blue-600 dark:text-blue-400 rounded-full">Symfony</span>
+                        <span
+                            class="px-6 py-2 bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 rounded-full">Blade</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
+                <div class="lg:col-span-6">
+                    <img src="images/eco_app_preview.gif" alt="Gif de la plateforme de gestion centralisée de documents"
+                        class="w-full rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="lg:col-span-6 space-y-4 text-center lg:text-left">
+                    <h4 class="text-3xl font-bold text-gray-900 dark:text-white">Plateforme de gestion centralisée de
+                        documents</h4>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Développement d'un CRUD en PHP sans framework pour la gestion centralisée des documents des
+                        salariés et stagiaires. Ce projet permet de créer, lire, mettre à jour et supprimer des
+                        documents via une interface utilisateur simple et intuitive. Les fonctionnalités incluent la
+                        gestion des utilisateurs et la recherche de documents.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <span class="px-6 py-2 bg-pink-500/20 text-pink-600 dark:text-pink-400 rounded-full">PHP</span>
+                        <span class="px-6 py-2 bg-blue-500/20 text-blue-600 dark:text-blue-400 rounded-full">HTML</span>
+                        <span
+                            class="px-6 py-2 bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 rounded-full">CSS</span>
+                        <span
+                            class="px-6 py-2 bg-purple-500/20 text-purple-600 dark:text-purple-400 rounded-full">AJAX</span>
+                        <span
+                            class="px-6 py-2 bg-gray-500/20 text-gray-600 dark:text-gray-400 rounded-full">jQuery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 sm:py-32 relative bg-white dark:bg-black theme-transition">
+        <div
+            class="absolute inset-0 bg-gradient-to-t from-gray-100 to-white dark:from-purple-900/30 dark:to-black theme-transition">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
+            <h3 class="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-12 sm:mb-20">CONTACT</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                <div class="space-y-6 sm:space-y-8">
+                    <h4 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Travaillons ensemble !</h4>
+                    <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300">Intéressé par la création
+                        d'expériences web uniques ?
+                        Contactez-moi pour discuter de votre projet.</p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="https://www.linkedin.com/in/mateo-carciu-18614b240/"
+                            class="text-gray-900 dark:text-white hover:text-pink-500 transition-colors duration-300">
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/mateocarciu"
+                            class="text-gray-900 dark:text-white hover:text-pink-500 transition-colors duration-300">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <form class="space-y-6" id="contactForm">
+                    <div>
+                        <input type="text" placeholder="Votre nom" name="name" required
+                            class="w-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg px-4 sm:px-6 py-3 sm:py-4 
+                                   text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500
+                                   focus:border-pink-500 dark:focus:border-pink-500 focus:outline-none transition-colors duration-300">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Objet" name="sub" required
+                            class="w-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg px-4 sm:px-6 py-3 sm:py-4 
+                                   text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500
+                                   focus:border-pink-500 dark:focus:border-pink-500 focus:outline-none transition-colors duration-300">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Votre email" name="email" required
+                            class="w-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg px-4 sm:px-6 py-3 sm:py-4 
+                                   text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500
+                                   focus:border-pink-500 dark:focus:border-pink-500 focus:outline-none transition-colors duration-300">
+                    </div>
+                    <div>
+                        <textarea placeholder="Votre message" rows="4" name="message" required
+                            class="w-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg px-4 sm:px-6 py-3 sm:py-4 
+                                      text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500
+                                      focus:border-pink-500 dark:focus:border-pink-500 focus:outline-none transition-colors duration-300"></textarea>
+                    </div>
+                    <button class="w-full py-3 sm:py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg
+                                     hover:opacity-90 transition-opacity duration-300" type="submit" name="submit">
+                        Envoyer le message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+<footer class="bg-gray-100 dark:bg-purple-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="py-8 text-center text-gray-600 dark:text-gray-300">
+            <p class="text-sm">© 2025 - Mateo CARCIU</p>
+        </div>
+    </div>
+</footer>
+
 </html>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<script>
+    tailwind.config = {
+        darkMode: 'class'
+    }
+    // Theme
+    const themeToggle = document.getElementById('themeToggle');
+
+    // Menu Burger
+    const menuToggle = document.getElementById('menuToggle');
+    const mainMenu = document.getElementById('mainMenu');
+
+    // Verify if the user has set a theme
+    function setInitialTheme() {
+        // If the user has set a theme, use it
+        if ('theme' in localStorage) {
+            if (localStorage.theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        } else {
+            // If the user hasn't set a theme, use the browser default
+            localStorage.theme = 'light';
+            document.documentElement.classList.remove('dark');
+        }
+    }
+
+    // Set the initial theme
+    setInitialTheme();
+
+    // Toggle the theme
+    themeToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    });
+
+    menuToggle.addEventListener('click', () => {
+        const spans = menuToggle.querySelectorAll('span');
+        mainMenu.classList.toggle('hidden'); // Affiche/Cache le menu
+        menuToggle.classList.toggle('active');
+
+        // Animation des barres du burger pour former un "X"
+        if (menuToggle.classList.contains('active')) {
+            spans[0].classList.add('transform', 'rotate-45', 'translate-y-2');
+            spans[1].classList.add('opacity-0');
+            spans[2].classList.add('transform', '-rotate-45', '-translate-y-2');
+        } else {
+            spans[0].classList.remove('transform', 'rotate-45', 'translate-y-2');
+            spans[1].classList.remove('opacity-0');
+            spans[2].classList.remove('transform', '-rotate-45', '-translate-y-2');
+        }
+    });
+
+    // Navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                const navHeight = document.querySelector('nav').offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+            }
+        });
+    }, observerOptions);
+
+    // Observer for the sections
+    document.querySelectorAll('section > div, .group').forEach(element => {
+        element.classList.add('transform', 'transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+        observer.observe(element);
+    });
+
+    // Observer for the skills
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+
+        fetch('https://www.eco-cartouches71.fr/contactM.php', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+                if (response.ok) {
+                    this.reset();
+                    showNotification('Message envoyé avec succès !', 'success');
+                } else {
+                    showNotification('Une erreur inattendue est survenue.', 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Erreur réseau:', error);
+            });
+    });
+
+    // Show a notification
+    function showNotification(message, type) {
+        const notification = document.createElement('div');
+        notification.className = `
+            fixed bottom-4 right-4 px-6 py-4 rounded-lg shadow-lg text-white text-sm font-medium
+            ${type === 'success' ? 'bg-green-500' : 'bg-red-500'}
+            transition-transform transform scale-0
+        `;
+        notification.innerText = message;
+
+        document.body.appendChild(notification);
+        setTimeout(() => {
+            notification.classList.add('scale-100');
+        }, 50);
+
+        setTimeout(() => {
+            notification.classList.remove('scale-100');
+            setTimeout(() => notification.remove(), 300);
+        }, 4000);
+    }
+</script>
