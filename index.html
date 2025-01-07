@@ -547,10 +547,6 @@
     // Theme
     const themeToggle = document.getElementById('themeToggle');
 
-    // Menu Burger
-    const menuToggle = document.getElementById('menuToggle');
-    const mainMenu = document.getElementById('mainMenu');
-
     // Verify if the user has set a theme
     function setInitialTheme() {
         // If the user has set a theme, use it
@@ -569,12 +565,17 @@
 
     // Set the initial theme
     setInitialTheme();
+    document.documentElement.style.visibility = 'visible';
 
     // Toggle the theme
     themeToggle.addEventListener('click', () => {
         document.documentElement.classList.toggle('dark');
         localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
     });
+
+    // Menu Burger
+    const menuToggle = document.getElementById('menuToggle');
+    const mainMenu = document.getElementById('mainMenu');
 
     menuToggle.addEventListener('click', () => {
         const spans = menuToggle.querySelectorAll('span');
