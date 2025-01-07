@@ -8,14 +8,6 @@
     <meta name="author" content="Mateo Carciu">
     <title>Mateo Carciu</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // Immediately set the theme before the page renders to avoid the flash of the default theme
-        if (localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
-            document.documentElement.classList.add('light');
-        } else {
-            document.documentElement.classList.add('dark');
-        }
-    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
@@ -552,31 +544,32 @@
     tailwind.config = {
         darkMode: 'class'
     }
-    // Theme management
+    // Theme
     const themeToggle = document.getElementById('themeToggle');
 
-    // Update theme in localStorage and DOM
-    function setTheme(theme) {
-        if (theme === 'dark') {
-            document.documentElement.classList.add('dark');
-            localStorage.theme = 'dark';
+    // Verify if the user has set a theme
+    function setInitialTheme() {
+        // If the user has set a theme, use it
+        if ('theme' in localStorage) {
+            if (localStorage.theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
         } else {
-            document.documentElement.classList.remove('dark');
+            // If the user hasn't set a theme, use the browser default
             localStorage.theme = 'light';
+            document.documentElement.classList.remove('dark');
         }
     }
 
-    // Handle theme toggle click
-    themeToggle.addEventListener('click', () => {
-        const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-        setTheme(newTheme);
-    });
+    // Set the initial theme
+    setInitialTheme();
 
-    // Listen for system theme changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        if (!localStorage.theme) { // Only react to system changes if user hasn't set a preference
-            setTheme(e.matches ? 'dark' : 'light');
-        }
+    // Toggle the theme
+    themeToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
     });
 
     // Menu Burger
