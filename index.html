@@ -10,10 +10,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Immediately set the theme before the page renders to avoid the flash of the default theme
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
-            document.documentElement.classList.add('dark');
+        if (localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            document.documentElement.classList.add('light');
         } else {
-            document.documentElement.classList.remove('dark');
+            document.documentElement.classList.add('dark');
         }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -546,23 +546,13 @@
     html {
         scroll-behavior: smooth;
     }
-    :root {
-    background-color: white;
-    }
-    :root.dark {
-        background-color: black;
-    }
-
-    html:not(.theme-loaded) {
-        visibility: hidden;
-    }
 </style>
 
 <script>
     tailwind.config = {
         darkMode: 'class'
     }
-    // Theme
+    // Theme management
     const themeToggle = document.getElementById('themeToggle');
 
     // Update theme in localStorage and DOM
@@ -573,18 +563,6 @@
         } else {
             document.documentElement.classList.remove('dark');
             localStorage.theme = 'light';
-        }
-    }
-
-    // Initialize theme based on user preference or system setting
-    function initializeTheme() {
-        const userTheme = localStorage.theme;
-        const systemDarkMode = window.matchMedia('(prefers-color-scheme: light)').matches;
-        
-        if (userTheme) {
-            setTheme(userTheme);
-        } else {
-            setTheme(systemDarkMode ? 'dark' : 'light');
         }
     }
 
@@ -600,9 +578,6 @@
             setTheme(e.matches ? 'dark' : 'light');
         }
     });
-
-    // Initialize theme on page load
-    initializeTheme();
 
     // Menu Burger
     const menuToggle = document.getElementById('menuToggle');
