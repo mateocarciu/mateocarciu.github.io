@@ -546,6 +546,16 @@
     html {
         scroll-behavior: smooth;
     }
+    :root {
+    background-color: white;
+    }
+    :root.dark {
+        background-color: black;
+    }
+
+    html:not(.theme-loaded) {
+        visibility: hidden;
+    }
 </style>
 
 <script>
