@@ -8,6 +8,14 @@
     <meta name="author" content="Mateo Carciu">
     <title>Mateo Carciu</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Immediately set the theme before the page renders to avoid the flash of the default theme
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
@@ -547,31 +555,44 @@
     // Theme
     const themeToggle = document.getElementById('themeToggle');
 
-    // Verify if the user has set a theme
-    function setInitialTheme() {
-        // If the user has set a theme, use it
-        if ('theme' in localStorage) {
-            if (localStorage.theme === 'dark') {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
+    // Update theme in localStorage and DOM
+    function setTheme(theme) {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
         } else {
-            // If the user hasn't set a theme, use the browser default
-            localStorage.theme = 'light';
             document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light';
         }
     }
 
-    // Set the initial theme
-    setInitialTheme();
-    document.documentElement.style.visibility = 'visible';
+    // Initialize theme based on user preference or system setting
+    function initializeTheme() {
+        const userTheme = localStorage.theme;
+        const systemDarkMode = window.matchMedia('(prefers-color-scheme: light)').matches;
+        
+        if (userTheme) {
+            setTheme(userTheme);
+        } else {
+            setTheme(systemDarkMode ? 'dark' : 'light');
+        }
+    }
 
-    // Toggle the theme
+    // Handle theme toggle click
     themeToggle.addEventListener('click', () => {
-        document.documentElement.classList.toggle('dark');
-        localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+        const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+        setTheme(newTheme);
     });
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.theme) { // Only react to system changes if user hasn't set a preference
+            setTheme(e.matches ? 'dark' : 'light');
+        }
+    });
+
+    // Initialize theme on page load
+    initializeTheme();
 
     // Menu Burger
     const menuToggle = document.getElementById('menuToggle');
