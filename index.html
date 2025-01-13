@@ -16,7 +16,8 @@
     <nav id="navbar" class="fixed w-full z-50 bg-transparent backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
             <div class="flex justify-between items-center">
-                <a href="#about" class="text-2xl sm:text-4xl font-bold text-black dark:text-white tracking-wider">MATEO CARCIU</a>
+                <a href="#about" class="text-2xl sm:text-4xl font-bold text-black dark:text-white tracking-wider">MATEO
+                    CARCIU</a>
 
                 <button id="menuToggle"
                     class="md:hidden flex flex-col justify-between w-6 h-5 text-black dark:text-white">
@@ -25,11 +26,10 @@
                     <span class="h-0.5 w-full bg-current origin-center transition-transform duration-300"></span>
                 </button>
 
-                <div id="mainMenu"
-                class="hidden md:flex items-center md:space-x-6 lg:space-x-12 fixed md:static top-16 left-0 right-0 z-50 flex flex-col md:flex-row rounded-b-lg p-4 md:p-0 
+                <div id="mainMenu" class="hidden md:flex items-center md:space-x-6 lg:space-x-12 fixed md:static top-16 left-0 right-0 z-50 flex flex-col md:flex-row rounded-b-lg p-4 md:p-0 
                        md:bg-transparent md:dark:bg-transparent bg-white/95 dark:bg-black
                        space-y-4 md:space-y-0">
-            
+
                     <a href="#work"
                         class="text-black dark:text-white dark:hover:text-pink-500 hover:text-pink-500 transition-colors duration-300">
                         EXPÉRIENCES
@@ -200,7 +200,8 @@
                             </div>
                             <div class="space-y-2">
                                 <div class="text-pink-500">2022-2023</div>
-                                <div class="text-xl font-semibold text-gray-900 dark:text-white">Licence Pro - Commercialisation des
+                                <div class="text-xl font-semibold text-gray-900 dark:text-white">Licence Pro -
+                                    Commercialisation des
                                     produits en ligne</div>
                                 <div class="text-gray-600 dark:text-gray-300">Iut de Dijon - Dijon</div>
                             </div>
@@ -409,9 +410,12 @@
                         class="w-4/12 lg:w-3/12 h-1/4 object-cover rounded-xl hover:z-10 shadow-lg transform lg:hover:scale-150 transition-transform duration-700">
                 </div>
                 <div class="lg:col-span-6 space-y-4 text-center lg:text-left">
-                    <h4 class="text-3xl font-bold text-gray-900 dark:text-white">Application mobile React</h4>
+                    <h4 class="text-3xl font-bold text-gray-900 dark:text-white">Application mobile DayWords</h4>
                     <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Une application mobile en React Native où l'idée est que l'utilisateur reçoit une notification à
+                        <a href="https://github.com/mateocarciu/DayWords" target="_blank" class="text-pink-500">
+                            DayWords
+                        </a> est une application mobile en React Native où l'idée est que l'utilisateur reçoit une
+                        notification à
                         un moment aléatoire de la journée. À ce moment-là,
                         il peut écrire une phrase, un texte ou un mot pour résumer sa journée. Il peut également
                         démarrer un fil de discussion,
@@ -436,7 +440,7 @@
                     <h4 class="text-3xl font-bold text-gray-900 dark:text-white">Site vitrine de taxi</h4>
                     <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
                         Création du site vitrine <a href="https://www.taxiroox71.fr/" target="_blank"
-                            class="text-gray-900 dark:text-white hover:text-pink-500 transition-colors duration-300">
+                            class="text-pink-500">
                             TAXIROOX71
                         </a> lors du lancement de l'entreprise afin d'affirmer sa présence sur le web. Ce projet inclut
                         la conception et le développement du site, ainsi que l'optimisation du référencement pour
@@ -619,25 +623,25 @@
 
         if (menuToggle.classList.contains('active')) {
             const closeMenu = () => {
-            mainMenu.classList.add('hidden');
-            menuToggle.classList.remove('active');
-            spans[0].classList.remove('transform', 'rotate-45', 'translate-y-2');
-            spans[1].classList.remove('opacity-0');
-            spans[2].classList.remove('transform', '-rotate-45', '-translate-y-2');
-            navbar.classList.remove('bg-white/95', 'dark:bg-black');
-            navbar.classList.add('backdrop-blur-sm');
+                mainMenu.classList.add('hidden');
+                menuToggle.classList.remove('active');
+                spans[0].classList.remove('transform', 'rotate-45', 'translate-y-2');
+                spans[1].classList.remove('opacity-0');
+                spans[2].classList.remove('transform', '-rotate-45', '-translate-y-2');
+                navbar.classList.remove('bg-white/95', 'dark:bg-black');
+                navbar.classList.add('backdrop-blur-sm');
 
             };
 
 
             document.addEventListener('click', (event) => {
-            if (!mainMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-                closeMenu();
-            }
+                if (!mainMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    closeMenu();
+                }
             });
 
             mainMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', closeMenu);
+                link.addEventListener('click', closeMenu);
             });
         }
     });
