@@ -1,65 +1,65 @@
-# Portfolio de Mateo Carciu
+# Mateo Carciu's Portfolio
 
-Bienvenue sur mon portfolio ! Ce site présente mon parcours, mes compétences, mes expériences professionnelles et mes projets.
+Welcome to my portfolio! This site showcases my background, skills, professional experiences, and projects.
 
-## Table des matières
+## Table of Contents
 
-- [À propos](#à-propos)
-- [Expériences](#expériences)
-- [Compétences](#compétences)
-- [Projets](#projets)
+- [About](#about)
+- [Experiences](#experiences)
+- [Skills](#skills)
+- [Projects](#projects)
 - [Contact](#contact)
 
-## À propos
+## About
 
-Je m'appelle Mateo Carciu et je suis actuellement étudiant à l'ESGI en 2ème année de Master Ingénierie du Web. Passionné par le développement web, je me spécialise dans les technologies front-end et back-end.
+My name is Mateo Carciu, and I am currently a Master's student in Web Engineering at ESGI. Passionate about web development, I specialize in both front-end and back-end technologies.
 
-## Expériences
+## Experiences
 
-### Développeur Full Stack - EDiCS (2023 - 2025)
+### Full Stack Developer - EDiCS (2023 - 2025)
 
-- Migration et développement d'une plateforme SaaS avec Laravel et Nuxt.
-- Maintenance continue et ajout de nouvelles fonctionnalités.
-- Mise en place de tests unitaires et revue de code.
-- Intégration de Tailwind CSS et TypeScript.
+- Migrated and developed a SaaS platform using Laravel and Nuxt.
+- Performed continuous maintenance and added new features.
+- Implemented unit tests and conducted code reviews.
+- Integrated Tailwind CSS and TypeScript.
 
-### Développeur Full Stack - 10Torsions (2022 - 2023)
+### Full Stack Developer - 10Torsions (2022 - 2023)
 
-- Développement d'une solution de suivi client en PHP.
-- Mise en place d'un système de rappels automatisés.
-- Optimisation des bases de données.
-- Modernisation de l'interface intranet.
+- Developed a client tracking solution in PHP.
+- Set up an automated reminder system.
+- Optimized databases.
+- Modernized the intranet interface.
 
-### Développeur Full Stack - Eco Cartouches (2022)
+### Full Stack Developer - Eco Cartouches (2022)
 
-- Développement d'un CRUD complet en PHP.
-- Virtualisation des archives physiques.
-- Hébergement et déploiement du projet.
-- Refonte du site vitrine de l'entreprise.
+- Developed a complete CRUD application in PHP.
+- Virtualized physical archives.
+- Hosted and deployed the project.
+- Redesigned the company's showcase website.
 
-## Compétences
+## Skills
 
 - **Back-end**: PHP, Laravel, Symfony, SQL, MongoDB, Node.js
 - **Front-end**: Vue.js, Nuxt, TypeScript, Tailwind CSS, HTML, CSS
-- **Autres compétences**: Git, GitLab, Jira, Tests unitaires, Revue de code
+- **Other Skills**: Git, GitLab, Jira, Unit Testing, Code Review
 
-## Projets
+## Projects
 
-### Application mobile DayWords
+### DayWords Mobile Application
 
-[DayWords](https://github.com/mateocarciu/DayWords) est une application mobile en React Native où l'utilisateur peut écrire une phrase, un texte ou un mot pour résumer sa journée. Il peut également démarrer un fil de discussion, ajouter des amis, voir les publications de ses amis et les commenter.
+[DayWords](https://github.com/mateocarciu/DayWords) is a React Native mobile application where users can write a sentence, text, or word to summarize their day. They can also start a discussion thread, add friends, view friends' posts, and comment on them.
 
-### Site vitrine de taxi
+### Taxi Showcase Website
 
-Création du site vitrine [TAXIROOX71](https://www.taxiroox71.fr/) pour affirmer la présence de l'entreprise sur le web. Ce projet inclut la conception et le développement du site, ainsi que l'optimisation du référencement.
+Created the showcase website [TAXIROOX71](https://www.taxiroox71.fr/) to establish the company's online presence. This project included designing and developing the site, as well as optimizing its SEO.
 
-### Plateforme de gestion centralisée de documents
+### Centralized Document Management Platform
 
-Développement d'un CRUD en PHP pour la gestion centralisée des documents des salariés et stagiaires de l'entreprise Eco Cartouches. Les fonctionnalités incluent la gestion des utilisateurs et la recherche de documents.
+Developed a CRUD application in PHP for centralized management of employee and intern documents at Eco Cartouches. Features include user management and document search functionality.
 
 ## Contact
 
-Intéressé par la création d'expériences web uniques ? Contactez-moi pour discuter de votre projet.
+Interested in creating unique web experiences? Contact me to discuss your project.
 
 - [LinkedIn](https://www.linkedin.com/in/mateo-carciu-18614b240/)
 - [GitHub](https://github.com/mateocarciu)
