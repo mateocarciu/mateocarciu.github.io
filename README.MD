@@ -43,20 +43,6 @@ My name is Mateo Carciu, and I am currently a Master's student in Web Engineerin
 - **Front-end**: Vue.js, Nuxt, TypeScript, Tailwind CSS, HTML, CSS
 - **Other Skills**: Git, GitLab, Jira, Unit Testing, Code Review
 
-## Projects
-
-### DayWords Mobile Application
-
-[DayWords](https://github.com/mateocarciu/DayWords) is a React Native mobile application where users can write a sentence, text, or word to summarize their day. They can also start a discussion thread, add friends, view friends' posts, and comment on them.
-
-### Taxi Showcase Website
-
-Created the showcase website [TAXIROOX71](https://www.taxiroox71.fr/) to establish the company's online presence. This project included designing and developing the site, as well as optimizing its SEO.
-
-### Centralized Document Management Platform
-
-Developed a CRUD application in PHP for centralized management of employee and intern documents at Eco Cartouches. Features include user management and document search functionality.
-
 ## Contact
 
 Interested in creating unique web experiences? Contact me to discuss your project.
