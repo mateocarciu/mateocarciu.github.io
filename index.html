@@ -299,6 +299,29 @@
 				<h3 class="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-12 sm:mb-20">PROJETS</h3>
 				<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
 					<div class="lg:col-span-6">
+						<video autoplay loop muted playsinline alt="Demo de l'extension Chrome Zap It" class="w-full rounded-xl shadow-lg transform lg:hover:scale-125 hover:z-10 transition-transform duration-700">
+							<source src="images/zapit.webm" type="video/webm" />
+						</video>
+					</div>
+					<div class="lg:col-span-6 space-y-4 text-center lg:text-left">
+						<h4 class="text-3xl font-bold text-gray-900 dark:text-white text-center lg:text-left">
+							Zap It
+							<span class="ml-2 px-3 py-1 text-sm font-semibold bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full whitespace-nowrap inline-block relative -top-1">2025</span>
+						</h4>
+						<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+							<a href="https://github.com/mateocarciu/zap-it" target="_blank" class="text-pink-500">Zap It</a> est une extension Chrome permettant de modifier l’apparence et le contenu des sites web. Elle offre la suppression d’éléments (publicités, popups), la personnalisation des styles (couleurs, polices, opacité), et le stockage local des changements.<br /><br />
+							Les modifications sont enregistrées par domaine et persistent entre les sessions. L’extension utilise des sélecteurs CSS, y compris ceux de Tailwind CSS, et propose un aperçu en temps réel. L’installation se fait en mode développeur Chrome, sans envoi de données vers des serveurs externes.
+						</p>
+						<div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+							<span class="px-6 py-2 bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 rounded-full">Manifest V3</span>
+							<span class="px-6 py-2 bg-blue-500/20 text-blue-600 dark:text-blue-400 rounded-full">Chrome Extension</span>
+							<span class="px-6 py-2 bg-purple-500/20 text-purple-600 dark:text-purple-400 rounded-full">JavaScript</span>
+							<span class="px-6 py-2 bg-teal-500/20 text-teal-600 dark:text-teal-400 rounded-full">CSS</span>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
+					<div class="lg:col-span-6">
 						<video autoplay loop muted playsinline alt="Vidéo démo de l'application web kPhotos" class="w-full rounded-xl shadow-lg transform lg:hover:scale-125 hover:z-10 transition-transform duration-700">
 							<source src="images/kphotos.webm" type="video/webm" />
 						</video>
@@ -306,14 +329,14 @@
 					<div class="lg:col-span-6 space-y-4 text-center lg:text-left">
 						<h4 class="text-3xl font-bold text-gray-900 dark:text-white text-center lg:text-left">
 							kPhotos
-							<span class="ml-2 px-3 py-1 text-sm font-semibold bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full whitespace-nowrap inline-block relative -top-1">En cours</span>
+							<span class="ml-2 px-3 py-1 text-sm font-semibold bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full whitespace-nowrap inline-block relative -top-1">2025</span>
 						</h4>
 						<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-							<a href="https://k-photos.nuxt.dev/" target="_blank" class="text-pink-500">kPhotos</a> est une application web alternative à Google Photos, développée avec Nuxt 3 et Vue.js. Elle permet de gérer vos fichiers, photos et vidéos de façon intuitive et sécurisée grâce à l'API Infomaniak.<br /><br />
-							Accès à votre drive Infomaniak pour parcourir tous vos fichiers, affichage détaillé des fichiers (taille, type, date de modification), récupération de tous les médias du drive pour un affichage complet regroupé par dates, téléchargement facile des images et vidéos, filtres avancés (type, date, pertinence, ordre), mode sombre.
+							<a href="https://k-photos.nuxt.dev/" target="_blank" class="text-pink-500">kPhotos</a> est une application web réalisée avec Nuxt 4 et Vue.js, qui propose une alternative à Google Photos. Elle permet de parcourir et gérer les fichiers, photos et vidéos présents sur le drive Infomaniak via son API.<br /><br />
+							L'application affiche les fichiers avec leurs détails (taille, type, date de modification), regroupe les médias par date, propose le téléchargement des images et vidéos, des filtres par type et date, et un mode sombre.
 						</p>
 						<div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-							<span class="px-6 py-2 bg-blue-500/20 text-blue-600 dark:text-blue-400 rounded-full">Nuxt 3</span>
+							<span class="px-6 py-2 bg-blue-500/20 text-blue-600 dark:text-blue-400 rounded-full">Nuxt 4</span>
 							<span class="px-6 py-2 bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 rounded-full">Vue.js</span>
 							<span class="px-6 py-2 bg-teal-500/20 text-teal-600 dark:text-teal-400 rounded-full">Tailwind CSS</span>
 							<span class="px-6 py-2 bg-red-500/20 text-red-600 dark:text-red-400 rounded-full">Infomaniak API</span>
@@ -329,7 +352,7 @@
 					<div class="lg:col-span-6 space-y-4 text-center lg:text-left">
 						<h4 class="text-3xl font-bold text-gray-900 dark:text-white text-center lg:text-left">
 							Application mobile DayWords
-							<span class="ml-2 px-3 py-1 text-sm font-semibold bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full whitespace-nowrap inline-block relative -top-1">En cours</span>
+							<span class="ml-2 px-3 py-1 text-sm font-semibold bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full whitespace-nowrap inline-block relative -top-1">2025</span>
 						</h4>
 						<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
 							<a href="https://github.com/mateocarciu/DayWords" target="_blank" class="text-pink-500"> DayWords </a> est une application mobile développée en React Native. L'idée est que l'utilisateur puisse écrire une phrase, un texte ou un mot pour résumer sa journée. Il peut également démarrer un fil de discussion, ajouter des amis, voir les publications de ses amis et commenter celles-ci.
