@@ -81,7 +81,7 @@ const translations = {
 			zapit: {
 				title: 'Zap It',
 				description:
-					'<a href="https://github.com/mateocarciu/zap-it" target="_blank" class="text-pink-500">Zap It</a> est une extension Chrome permettant de modifier l\'apparence et le contenu des sites web. Elle offre la suppression d\'éléments (publicités, popups), la personnalisation des styles (couleurs, polices, opacité), et le stockage local des changements.<br /><br />Les modifications sont enregistrées par domaine et persistent entre les sessions. L\'extension utilise des sélecteurs CSS, y compris ceux de Tailwind CSS, et propose un aperçu en temps réel. L\'installation se fait en mode développeur Chrome, sans envoi de données vers des serveurs externes.'
+					'<a href="https://chromewebstore.google.com/detail/zap-it-web-page-editor/jdcgeigmekmfaakbjaafhhedfgaofmpd?hl=en-US&utm_source=ext_sidebar" target="_blank" class="text-pink-500">Zap It</a> est une extension Chrome permettant de modifier l\'apparence et le contenu des sites web. Elle offre la suppression d\'éléments (publicités, popups), la personnalisation des styles (couleurs, polices, opacité), et le stockage local des changements.<br /><br />Les modifications sont enregistrées par domaine et persistent entre les sessions. L\'extension utilise des sélecteurs CSS, y compris ceux de Tailwind CSS, et propose un aperçu en temps réel. L\'installation se fait en mode développeur Chrome, sans envoi de données vers des serveurs externes.'
 			},
 			kphotos: {
 				title: 'kPhotos',
@@ -207,7 +207,7 @@ const translations = {
 			zapit: {
 				title: 'Zap It',
 				description:
-					'<a href="https://github.com/mateocarciu/zap-it" target="_blank" class="text-pink-500">Zap It</a> is a Chrome extension that allows you to modify the appearance and content of websites. It offers element removal (ads, popups), style customization (colors, fonts, opacity), and local storage of changes.<br /><br />Modifications are saved by domain and persist between sessions. The extension uses CSS selectors, including Tailwind CSS selectors, and provides real-time preview. Installation is done in Chrome developer mode, without sending data to external servers.'
+					'<a href="https://chromewebstore.google.com/detail/zap-it-web-page-editor/jdcgeigmekmfaakbjaafhhedfgaofmpd?hl=en-US&utm_source=ext_sidebar" target="_blank" class="text-pink-500">Zap It</a> is a Chrome extension that allows you to modify the appearance and content of websites. It offers element removal (ads, popups), style customization (colors, fonts, opacity), and local storage of changes.<br /><br />Modifications are saved by domain and persist between sessions. The extension uses CSS selectors, including Tailwind CSS selectors, and provides real-time preview. Installation is done in Chrome developer mode, without sending data to external servers.'
 			},
 			kphotos: {
 				title: 'kPhotos',
