@@ -86,7 +86,7 @@ const translations = {
 			kphotos: {
 				title: 'kPhotos',
 				description:
-					'<a href="https://k-photos.nuxt.dev/" target="_blank" class="text-pink-500">kPhotos</a> est une application web réalisée avec Nuxt 4 et Vue.js, qui propose une alternative à Google Photos. Elle permet de parcourir et gérer les fichiers, photos et vidéos présents sur le drive Infomaniak via son API.<br /><br />L\'application affiche les fichiers avec leurs détails (taille, type, date de modification), regroupe les médias par date, propose le téléchargement des images et vidéos, des filtres par type et date, et un mode sombre.'
+					'<a href="https://k-photos.vercel.app/" target="_blank" class="text-pink-500">kPhotos</a> est une application web réalisée avec Nuxt 4 et Vue.js, qui propose une alternative à Google Photos. Elle permet de parcourir et gérer les fichiers, photos et vidéos présents sur le drive Infomaniak via son API.<br /><br />L\'application affiche les fichiers avec leurs détails (taille, type, date de modification), regroupe les médias par date, propose le téléchargement des images et vidéos, des filtres par type et date, et un mode sombre.'
 			},
 			daywords: {
 				title: 'Application mobile DayWords',
@@ -212,7 +212,7 @@ const translations = {
 			kphotos: {
 				title: 'kPhotos',
 				description:
-					'<a href="https://k-photos.nuxt.dev/" target="_blank" class="text-pink-500">kPhotos</a> is a web application built with Nuxt 4 and Vue.js, offering an alternative to Google Photos. It allows browsing and managing files, photos and videos from Infomaniak drive via its API.<br /><br />The application displays files with their details (size, type, modification date), groups media by date, offers downloading of images and videos, filters by type and date, and a dark mode.'
+					'<a href="https://k-photos.vercel.app/" target="_blank" class="text-pink-500">kPhotos</a> is a web application built with Nuxt 4 and Vue.js, offering an alternative to Google Photos. It allows browsing and managing files, photos and videos from Infomaniak drive via its API.<br /><br />The application displays files with their details (size, type, modification date), groups media by date, offers downloading of images and videos, filters by type and date, and a dark mode.'
 			},
 			daywords: {
 				title: 'DayWords Mobile Application',
